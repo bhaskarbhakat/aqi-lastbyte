@@ -1,0 +1,89 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .result-container {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-container h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .result-container p {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  
+  .result-container p.aqi {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .result-container .aqi-label {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .result-container .aqi-good {
+    background-color: #00cc00;
+  }
+  
+  .result-container .aqi-moderate {
+    background-color: #ffcc00;
+  }
+  
+  .result-container .aqi-unhealthy {
+    background-color: #ff6600;
+  }
+  
+  .result-container .aqi-very-unhealthy {
+    background-color: #ff3300;
+  }
+  
+  .result-container .aqi-hazardous {
+    background-color: #990099;
+  }
