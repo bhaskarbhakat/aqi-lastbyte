@@ -11,3 +11,4 @@ public class AqiBackendApplication {
 	}
 
 }
+// https://api.weatherbit.io/v2.0/current/airquality?city=delhi&country=india&key=61e35222025b48cea8e9bbbbe1dc6dd4
