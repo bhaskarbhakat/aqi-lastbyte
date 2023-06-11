@@ -31,7 +31,8 @@ function AirQuality() {
 
   useEffect(() => {
     if (searchQuery) {
-      const url = `${BASE_URL}?city=${city}&country=${country}&key=${API_KEY}`;
+      const url = `${BASE_URL}?city=${city}&country=${country}`;
+      console.log(url);
       fetch(url)
         .then(response => {
             if (response.ok) {

@@ -25,13 +25,19 @@ public class AirQualityController {
         this.apiUrl = apiUrl;
     }
 
+    // @GetMapping("/hello")
+    // public String getHello(@RequestParam("city") String city,
+    //                        @RequestParam("country") String country){
+    //     String url = apiUrl + "?city=" + city + "&country=" + country + "&key=" + apiKey;
+    //     return url;
+    // }
+
     @GetMapping("/air-quality")
     public ResponseEntity<AirQualityResponseDto> getAirQualityByCityAndCountry(@RequestParam("city") String city,
                            @RequestParam("country") String country){
 
         String url = apiUrl + "?city=" + city + "&country=" + country + "&key=" + apiKey;
         ResponseEntity<AirQualityDto> apiResponse = restTemplate.getForEntity(url, AirQualityDto.class);
-    
         // Extract the response body
         AirQualityDto airQualityResponse = apiResponse.getBody();
 
@@ -39,7 +45,6 @@ public class AirQualityController {
 
             AirQualityResponseDto responseData = new AirQualityResponseDto();
 
-            // Set the entire data from AirQualityDto in one go
             responseData.setData(airQualityResponse.getData());
             responseData.setCity_name(airQualityResponse.getCity_name());
             responseData.setCountry_code(airQualityResponse.getCountry_code());
